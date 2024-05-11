@@ -1,0 +1,14 @@
+{
+  "name": "english-to-katakana-conversion",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.ts"
+  },
+  "repository": "https://github.com/soshi1234/english-to-katakana-conversion",
+  "author": "soshi1234 <148639191+soshi1234@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
