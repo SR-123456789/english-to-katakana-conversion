@@ -1,11 +1,11 @@
 var XLSX = require('xlsx');
 var fs = require('fs');
-var workbook1 = XLSX.readFile('./src/カタカナ語英字辞書あーお.xlsx');
-var workbook2 = XLSX.readFile('./src/カタカナ語英字辞書おーさ.xlsx');
-var workbook3 = XLSX.readFile('./src/カタカナ語英字辞書さーで.xlsx');
-var workbook4 = XLSX.readFile('./src/カタカナ語英字辞書でーひ.xlsx');
-var workbook5 = XLSX.readFile('./src/カタカナ語英字辞書ひーみ.xlsx');
-var workbook6 = XLSX.readFile('./src/カタカナ語英字辞書みーん.xlsx');
+var workbook1 = XLSX.readFile('./src/excel/カタカナ語英字辞書あーお.xlsx');
+var workbook2 = XLSX.readFile('./src/excel/カタカナ語英字辞書おーさ.xlsx');
+var workbook3 = XLSX.readFile('./src/excel/カタカナ語英字辞書さーで.xlsx');
+var workbook4 = XLSX.readFile('./src/excel/カタカナ語英字辞書でーひ.xlsx');
+var workbook5 = XLSX.readFile('./src/excel/カタカナ語英字辞書ひーみ.xlsx');
+var workbook6 = XLSX.readFile('./src/excel/カタカナ語英字辞書みーん.xlsx');
 
 const excel2JSON = (workbook) => {
 
@@ -28,4 +28,4 @@ const excel2JSON = (workbook) => {
 const competeJSON=excel2JSON(workbook1).concat(excel2JSON(workbook2)).concat(excel2JSON(workbook3)).concat(excel2JSON(workbook4)).concat(excel2JSON(workbook5)).concat(excel2JSON(workbook6))
 competeJSON.sort((a, b) => a.English.localeCompare(b.English));
 
-fs.writeFileSync('dictionary.json', JSON.stringify(competeJSON));
+fs.writeFileSync('./src/dictionary.json', JSON.stringify(competeJSON));
